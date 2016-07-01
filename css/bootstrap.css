@@ -6925,7 +6925,7 @@ a:hover, a:focus {
     height: 150px;
     border-radius: 40%;
     margin-top: 100px; /*外边距*/
-    background: url(../image/1.jpg) center;
+    background: url(../image/1.png) center;
     background-size: cover; /*规定背景图像的尺寸：*/
     transition: 1s
 }
