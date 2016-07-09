@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>WeChatWall</title>
+	<!--满屏显示-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="css/WeChatWall.css" rel="stylesheet" style="text/css" />
+    <!--外部js引用-->
+	<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+	<script src="https://cdn.bootcss.com/socket.io/1.4.8/socket.io.js"></script>
+	<script src="https://cdn.bootcss.com/vue/1.0.6/vue.js"></script>
+	<script src="https://twemoji.maxcdn.com/twemoji.min.js"></script>
+	<script src = "js/weface.js"></script>
+</head>
+<body>
+   <div class = "page-content">
+
+   <!--微信墙的上部分-->
+   <div class="theHead">
+       <img src="image/rjgc.jpg" align= "right" class="theImg" />
+        	<marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="15" width="65%"> 
+                扫码即可【上墙】
+            </marquee>
+   </div>
+
+   <!--用户部分-->
+   <div id="message-contents">
+       <ul class= "ulContent">
+       	    <li class="weChatMessage" v-for="weChatMessage in weChatMessages" transition="animation"><!--v-for把数据渲染到页面以及实现动画渲染效果-->
+       	    	<div class="message-container">
+       	    	    <div class="userMessage">
+                        <div class="headPortrait">
+                            <img v-bind:src="weChatMessage.headimgurl" class="head" />
+                        </div>
+                        <div class="userName">
+                            {{weChatMessage.nickname}}<!--获取微信用户的昵称-->
+                        </div>
+       	    	    </div>
+       	    	    <div class="userContent">
+       	    	    	 {{{weChatMessage.content}}}<!--获取微信用户输入的内容-->
+       	    	    </div>
+       	    	</div>
+       	    </li>
+       </ul>
+   </div>
+  
+   <!--管理员部分-->
+   <div id = "admin-contents">
+       	<ul style="padding-left:0;">
+            <li class="weChatMessage admin-weChatMessage" transition="admin" v-for="weChatMessage in admin">
+            <div class="message-container">
+                <div class="userMessage">
+                    <div class="headPortrait">
+                          <img v-bind:src="weChatMessage.headimgurl" class="head"/>
+                    </div>
+                    <div class="userName">
+                          {{weChatMessage.nickname}}
+                    </div>
+                </div>
+                <div class="userContent">   
+                    <marquee width="800vw" behavior = "alternate" scrollamount="10" loop = "-1">             
+                          {{{weChatMessage.content}}}
+                    </marquee>
+                </div>
+            </div>
+            </li>
+        </ul>
+   </div>
+
+   <!--微信墙的尾部-->
+   <div class="end">
+	   <marquee behavior="alternate" contenteditable="true" scrollamount="13" > 
+           欢迎来到我的微信墙
+        </marquee>
+   </div>
+   </div>
+
+   <!--js实现-->
+   <script src = "js/getMessage.js"></script>
+</body>
+</html>

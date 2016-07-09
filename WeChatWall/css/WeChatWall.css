@@ -1,0 +1,169 @@
+body{
+	background: url(../image/bg0.jpg);
+	background-repeat: no-repeat; 
+    -moz-background-size:100% 100%;  
+    background-size:100% 100%;  /*背景图片自适应浏览器大小*/
+	color: RGB(255, 251, 240);
+	height: 100vh;/*定义视口高度  占满整个屏幕*/
+    font-size: 2em;/*1em=16px 浏览器默认为16px*/
+    overflow: hidden;/*清除浮动*/
+    opacity: 0.5;
+}
+
+.theHead{
+	margin-bottom: -1.5vh;
+	margin-top: 1.3vh;
+	font-size: 1.5em;
+}
+
+.theImg{
+    height: 12.5vh;
+    width: 12.5vh;
+    right: 2.8vw;
+    margin-right: 2.8vw;
+    position: absolute;
+    z-index: 22;
+}
+
+#message-contents{
+	top: 5px;
+    width: 100%;
+}
+
+.ulContent{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.weChatMessage{
+    overflow: hidden;
+    height: 20vh;
+    color:  RGB(233, 233, 240);
+    background-color:  rgba(0, 0, 0, 0.65);
+    margin: 5vh ;
+    padding-top: 0.9vh;
+    padding-right: 1vh;
+    padding-left: 1.6vh;
+    padding-bottom: 1.89vh;
+    list-style: none; /*无标记*/
+    white-space: nowrap;/*强制在同一行内显示所有文本，合并文本间的多余空白，直到文本结束或者遭遇br对象*/
+}
+
+.userMessage{
+    width: 27vh;
+    float: left;
+    margin-right: 1.1em;
+}
+
+.message-container{
+	height: 24vh;
+	display: inline-block;
+	align-items: center;
+	opacity: 1;
+}
+
+/*头像*/
+.headPortrait{
+    height: 16.3vh;
+    width:  14vh;
+    position: relative;
+    background-size: cover;/*全覆盖*/
+    background: url(../image/unknown.jpg) no-repeat;
+    -moz-background-size:100% 100%;  
+    background-size:100% 100%;  /*背景图片自适应浏览器大小*/
+    margin: 0 30px;
+    opacity: 1;
+}
+
+.head{
+	height: 16.3vh;
+    width:  16.3vh;
+    position: relative;
+	opacity: 1;
+}
+
+.userName{
+	width: 100%;
+	display: inline-block;
+	font-size: 4.5vh;
+	text-align: center;
+	align-items: center;
+	overflow: hidden;/*清除浮动*/
+	/*white-space: nowrap;/*强制在同一行内显示所有文本，合并文本间的多余空白，直到文本结束或者遭遇br对象*/
+    text-overflow: ellipsis;/*当对象内文本溢出时显示省略标记(...)*/
+    opacity: 1;
+}
+
+.userContent{
+	height: 18vh;
+	display: inline-block;
+	align-items: center;
+	display: -webkit-flex; /* Safari */
+	-webkit-align-items: center; /* Safari 7.0+ */;
+	font-size: 7.5vh;
+	overflow: hidden;
+	margin: 1px;
+	opacity: 1;
+}
+
+/*接收消息时动画渲染*/
+.animation-transition, .admin-transition{
+	-moz-transition-property: all; /* Firefox 4 */
+    -webkit-transition-property:all; /* Safari 和 Chrome */
+    -o-transition-property:all; /* Opera */
+	transition-duration: 0.4s; 
+}
+
+/*用户和管理员消息进入和离开时的动画*/
+.animation-enter{
+	opacity: 0;
+	margin-left: 120px;
+	transform:rotate(-9deg);
+}
+
+.admin-enter{
+    opacity: 0;
+    transform:rotate(-9deg);
+    margin-left: -120px;
+}
+
+.animation-leave{
+    opacity: 0;
+    margin-top: -130px;
+    margin-left: -100px;
+    transform: rotate3d(-9deg);
+}
+
+.admin-leave{
+	opacity: 0;
+	margin-left: -100px;
+	transform:rotate(-9deg);
+}
+
+.move{
+    margin-top: calc((80px - 100vh) / 3 + 40px);
+    transition: margin-top 0.3s;
+}
+
+/*管理员*/
+#admin-contents{
+    position: absolute;
+    width: 100%;
+    top: 9vh;
+    z-index: 666;/*z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于
+                  堆叠顺序较低的元素的前面。仅能在定位元素上奏效（例如 position:absolute;*/
+
+}
+
+.admin-weChatMessage{
+    background-color: #000d0d;
+    border-radius: 30px;
+    transform: translateX(-10px) translateZ(10px) rotateZ(0.5deg);
+}
+
+.end {
+  margin-bottom: 12vh;
+  display: flex;
+  align-self: center;
+  font-size: 0.5em;
+}
