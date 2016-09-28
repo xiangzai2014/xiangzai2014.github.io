@@ -1,0 +1,51 @@
+table{
+	margin: auto;
+}
+
+.title{
+    font-size: 38px;
+    background-color: #66a;
+    height: 60px;
+}
+.text{
+    display: block;
+    text-align: center;
+    
+}
+
+.lefttable{
+	margin-left: 3vw;
+
+}
+
+#space{
+	border: 1px solid;
+	background-color: #233;
+}
+
+.righttable{
+	left: 50%;
+}
+
+.cellsGeneration{
+	font-size: 20px;
+	height: 40px;
+	background-color:#eee;
+}
+
+.btnShape{
+	width: 150px;
+	height: 70px;
+	font-size: 18px;
+	background-size: 60px 80px;
+	background-color: #aaa;
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
