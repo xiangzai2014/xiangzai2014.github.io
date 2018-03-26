@@ -1,0 +1,81 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+@-webkit-keyframes delay {
+    100% {
+        -webkit-transform: rotate(360deg);
+        -webkit-transform-origin: center
+    }
+}
+
+@-webkit-keyframes button {
+    0% {
+        color: #000
+    }
+    100% {
+        color: red
+    }
+}
+
+.icon {
+    height: 11px;
+    width: 11px;
+    border-radius: 14px;
+    -webkit-animation: delay 8s linear .10s infinite
+}
+
+/*日志和作业*/
+.daywrite {
+    width: 660px;
+    box-sizing: border-box;
+    display: table;
+    margin: 10px auto;/*浏览器自动计算外边距*/
+   /* border-style:dashed double;*/
+    border-bottom: 1px dashed #019875;/*下边框border-bottom-width、border-bottom-style、border-bottom-color*/
+    padding-bottom: 10px;/*下内边距*/
+    font-size: 20px;
+    font-weight: bold;/*粗体*/
+    color: #019875;
+    padding-left: 20px;/*左内边距*/
+    transition: 1s
+}
+
+.daywrite:hover {
+    width: 100%;
+    opacity: 0.5;/*不透明度*/
+}
+
+.daywritedate{
+	font-size: 18px;
+	font-weight: bolder;/*更粗体*/
+	color: #019115;
+}
+
+.daywriteicon {
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    transition: 1s;
+}
+.daywriteicon:hover{
+	transform: rotate(360deg);
+}
+
+.daywritecontent{
+	width: 860px;
+    box-sizing: border-box;
+    display: table;
+    margin: 8px auto;/*浏览器自动计算外边距*/
+   /* border-style:dashed double;*/
+    border-bottom: 1px dashed #013815;/*下边框border-bottom-width、border-bottom-style、border-bottom-color*/
+    padding-bottom: 10px;/*下内边距*/
+    font-size: 18px;
+    text-indent: 40px;/*首行缩进*/
+    letter-spacing: 0.7px; /*字符间距*/
+    line-height: 25px;  /*行间距*/
+    font-weight: bold;/*粗体*/
+    color: #019698;
+    padding-left: 10px;/*左内边距*/
+}
