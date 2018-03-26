@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>选词</title>
+    <!-- CSS，外部引用 -->
+    <link href="css/daywrite.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--自我介绍--> 
+	  <div class="intr">
+        <p class="peointr"><span style="border-bottom:1.5px dashed #fee;">欢迎光临&nbsp;<span style="font-size:38px; letter-spacing:8px; font-family: SimSun">@一萌</span>的作业展！</span>
+        </p>
+        <hr style="width:50%;border:1px solide #ccc"/>  
+    </div>
+    
+    <!--第一部分-->
+    <div class="titleSelect" id="part1">
+        <form action="#" method="post" name="myform">
+          <div style="float: left;">
+            特征：
+          </div>
+          <div style="float: left; width: 80%; text-align: center"> 
+            <select class="selectSet" name="area" onchange="local(this.value)">
+            <option>=请选择=</option>
+            <option value="济南">济南</option>
+            <option value="青岛">青岛</option>
+            <option value="威海">威海</option>
+            </select>
+
+            <select class="selectSet" name="area" onchange="local(this.value)">
+            <option>=请选择=</option>
+            <option value="济南">济南</option>
+            <option value="青岛">青岛</option>
+            <option value="威海">威海</option>
+            </select>
+
+            <select class="selectSet" name="area" onchange="local(this.value)">
+            <option>=请选择=</option>
+            <option value="济南">济南</option>
+            <option value="青岛">青岛</option>
+            <option value="威海">威海</option>
+            </select>
+
+            <select class="selectSet" name="area" onchange="local(this.value)">
+            <option>=请选择=</option>
+            <option value="济南">济南</option>
+            <option value="青岛">青岛</option>
+            <option value="威海">威海</option>
+            </select>
+          </div>
+          <div style="float: left;">
+            <input class="buttonShow" type="button" value="显示" onclick="show()">   
+          </div> 
+        </form>
+
+    </div>
+    <div class="content">
+    	<div class="pic pic1">
+        <video onmouseover="disableMute()" onmouseout="enableMute()" id="video1" autoplay="autoplay" loop="loop" muted="true">
+          <source src="image/1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    		<p>二校门</p>
+    	</div>
+    	
+    </div>
+
+    <!--底部引用标注声明-->
+    <div class="blog-footer">
+      <p>@copy right by liuxiang  |  2018-03</p>
+    </div>
+    <!--song-->
+    <!--
+    <a class="songcontrol">
+        <embed src="bgsound.mp3" autostart="true" loop="true" width="315" height="75">
+    </a>
+    <a class="song">
+        <object width="130" height="85">
+           <param name="movie" value="01.swf">
+           <embed src="01.swf" width="130" height="85">
+           </embed>
+        </object>
+    </a>
+  -->
+  </body>
+
+  <script type="text/javascript" language="JavaScript"> 
+    function enableMute() 
+    { 
+      var obj = document.getElementById('video1');
+      obj.muted = true;
+    } 
+    function disableMute(){
+      var obj = document.getElementById('video1');
+      obj.muted = false;
+    }
+</script> 
+</html>

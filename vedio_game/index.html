@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>个人主页</title>
+    <!-- CSS，外部引用 -->
+    <link href="css/daywrite.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--自我介绍--> 
+	  <div class="intr">
+        <p class="peointr"><span style="border-bottom:1.5px dashed #fee;">欢迎光临&nbsp;<span style="font-size:38px; letter-spacing:8px; font-family: SimSun">@一萌</span>的作业展！</span>
+        </p>
+        <hr style="width:50%;border:1px solide #ccc"/>  
+    </div>
+    
+    <!--第一部分-->
+    <div class="title" id="part1">国内</div>
+    <div class="content">
+    	<div class="pic pic1">
+        <video onmouseover="disableMute()" onmouseout="enableMute()" id="video1" autoplay="autoplay" loop="loop" muted="true">
+          <source src="image/1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    		<p>二校门</p>
+    	</div>
+    	<div class="pic pic2">
+        <a href="http://baike.baidu.com/link?url=csofTElxpfp6O9rS1dHZmV5Fcyh8vtJOHUHge4f9hp84yJkNB_sWkWX0FKoPgcKznogic3rb_OTW2GKJyVkkXa">
+    		<img src="image/qinghua2.jpg" alt="">
+        </a>
+    		<p>大礼堂</p>
+    	</div>
+    	<div class="pic pic3">
+        <a href="http://baike.baidu.com/link?url=d6Wwg6FgSOrT6JjsijkthFceol6nK4eE9TCz5bFlthJNd4QdWEpoE-BaN9JlYiai_qulIr-khaA0za5Quyetc_">
+    		<img src="image/qinghua3.jpg" alt="">
+        </a>
+    		<p>水木清华</p>
+    	</div>
+    </div>
+
+    <!--第二部分-->
+    <div class="title" id="part2">我的日志</div>
+    <div class="content">
+      <div class="daywrite">
+      <a href="rizhi1.html">
+         <span><img class="daywriteicon" src="image/rizhi.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;我的第一篇日志诞生了</span>
+      </a>
+      </div>
+      <div class="daywrite">
+         <span><img class="daywriteicon" src="image/rizhi.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;《航海日志》第一弹</span>
+      </div>
+      <div class="daywrite">
+         <span><img class="daywriteicon" src="image/rizhi.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;《航海日志》第二弹</span>
+      </div>
+    </div>
+
+   <!--第三部分-->
+	 <div class="title" id="part3">我的作业</div>
+     <div class="content">
+        <div class="daywrite">
+          <a href="">
+           <span><img class="daywriteicon" src="image/zuoye.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;实验一：&nbsp;&nbsp;我的主页</span>
+          </a>
+        </div>
+        <div class="daywrite">
+          <a href="">
+           <span><img class="daywriteicon" src="image/zuoye.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;实验二：&nbsp;&nbsp;****</span>
+          </a>
+        </div>
+        <div class="daywrite">
+          <a href="">
+           <span><img class="daywriteicon" src="image/zuoye.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;实验三：&nbsp;&nbsp;******</span>
+          </a>
+        </div>
+        <div class="daywrite">
+          <a href="">
+           <span><img class="daywriteicon" src="image/zuoye.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;实验四：&nbsp;&nbsp;********</span>
+          </a>
+        </div>
+        <div class="daywrite">
+          <a href="">
+           <span><img class="daywriteicon" src="image/zuoye.png"/>&nbsp;&nbsp;<span class="daywritedate">2016-07-01</span>&nbsp;&nbsp;&nbsp;&nbsp;实验五：&nbsp;&nbsp;**********</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--底部引用标注声明-->
+    <div class="blog-footer">
+      <p>@copy right by liuxiang  |  2018-03</p>
+    </div>
+    <!--song-->
+    <!--
+    <a class="songcontrol">
+        <embed src="bgsound.mp3" autostart="true" loop="true" width="315" height="75">
+    </a>
+    <a class="song">
+        <object width="130" height="85">
+           <param name="movie" value="01.swf">
+           <embed src="01.swf" width="130" height="85">
+           </embed>
+        </object>
+    </a>
+  -->
+  </body>
+
+  <script type="text/javascript" language="JavaScript"> 
+    function enableMute() 
+    { 
+      var obj = document.getElementById('video1');
+      obj.muted = true;
+    } 
+    function disableMute(){
+      var obj = document.getElementById('video1');
+      obj.muted = false;
+    }
+</script> 
+</html>

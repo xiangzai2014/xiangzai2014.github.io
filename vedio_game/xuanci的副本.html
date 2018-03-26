@@ -1,0 +1,63 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>获取选择框信息</title>
+        <script language="javascript">
+            function show(){
+                var name=document.myform.name.value;
+                alert(name);
+
+                var sex
+                if(document.myform.sex[0].checked){
+                    sex=document.myform.sex[0].value;    
+                }else{
+                    sex=document.myform.sex[1].value;
+                }
+                alert(sex);
+                
+                var hobby="";
+                for(i=0;i<document.myform.interesting.length;i++){  //循环遍历
+                    if(document.myform.interesting[i].checked){  //判断是否被选中
+                        hobby+=document.myform.interesting[i].value+"、"  //选中加入hobby中
+                    }    
+                }
+                alert(hobby);
+
+                var area=document.myform.result.value;
+                alert(area);
+            }
+
+            function local(val){
+                document.myform.result.value=val;
+            }
+
+        </script>    
+
+    </head>
+    <body>
+        <form action="#" method="post" name="myform">
+        姓名：
+        <input type="text" name="name"> <br/>
+        性别：
+        <input type="radio" name="sex" value="男" checked>男
+        <input type="radio" name="sex" value="女">女 <br/>
+        爱好：
+        <input type="checkbox" name="interesting" value="听音乐">听音乐
+        <input type="checkbox" name="interesting" value="看电影">看电影
+        <input type="checkbox" name="interesting" value="玩游戏">玩游戏
+        <input type="checkbox" name="interesting" value="看书">看书<br/>
+        地区：
+        <select name="area" onchange="local(this.value)"> <br/>
+            <option>=请选择=</option>
+            <option value="济南">济南</option>
+            <option value="青岛">青岛</option>
+            <option value="威海">威海</option>
+        </select>
+        <input type="text" name="result" readonly><br/>
+
+        <input type="button" value="显示内容" onclick="show()">
+        
+        </form>
+    </body>
+</html>
